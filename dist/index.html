@@ -6,27 +6,288 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PresalePro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header__wrapper">
-      <nav class="navigation">
+      <nav class="header__navigation  navigation">
         <div class="navigation__panel">
-          <img src="img/presale-pro-logo.svg" alt="PresalePro logotype">
+          <img class="navigation__logo" src="img/presale-pro-logo.svg" alt="PresalePro logotype">
           <button class="navigation__toggler">
+            <span class="navigation__hamburger"></span>
+            <span class="navigation__hamburger"></span>
             <span class="navigation__hamburger"></span>
           </button>
         </div>
-        <ul class="navigation__menu"></ul>
+        <ul class="navigation__menu">
+          <li class="navigation__item  navigation__item--active"><a href="">Mission</a></li>
+          <li class="navigation__item"><a href="">What is PP</a></li>
+          <li class="navigation__item"><a href="">Token</a></li>
+          <li class="navigation__item"><a href="">Support</a></li>
+          <li class="navigation__item"><a href="">Roadmap</a></li>
+          <li class="navigation__item"><a href="">Partners</a></li>
+          <li class="navigation__item"><a href="">Team</a></li>
+          <li class="navigation__item"><a href="">Press</a></li>
+        </ul>
+        <div class="navigation__lang  lang">
+          <button class="lang__value">EN</button>
+          <ul class="lang__list">
+            <li class="lang__item  lang__item--active">
+              <a class="lang__link" data-lang="EN" href="#">EN</a>
+            </li>
+            <li class="lang__item">
+              <a class="lang__link" data-lang="RU" href="#">RU</a>
+            </li>
+            <li class="lang__item">
+              <a class="lang__link" data-lang="DE" href="#">DE</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <h3 class="header__title">
         Contribute to early stage Blockchain <strong>startups</strong>
       </h3>
-      <p class="text">Now everyone can access the presale token fundraising opportunities.</p>
+      <p class="header__text  text  text--color-white">Now everyone can access the presale token fundraising opportunities.</p>
     </div>
   </header>
+  <main>
+    <section class="mission">
+      <div class="mission__wrapper">
+        <p class="mission__caption">our mission:</p>
+        <h3 class="mission__title  title">Inclusive early stage fundraising platform</h3>
+        <p class="mission__text  text  text--color-">PresalePro aims to increase an ICO’s return on investment through its “Members Only” platform for ICO presales, by linking visionary and anticipative investors with promising Blockchain-related start-ups.</p>
+        <a class="btn" href="#"><span class="btn__text  btn__text--icon-play">WATCH VIDEO</span></a>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="faq__wrapper">
+        <h3 class="faq__title  title">How does the platform work?
+        </h3>
+        <ul class="faq__list">
+          <li class="faq__item  faq__item--first">
+            <h4 class="faq__subtitle  title  title--font-small">Benefit 1</h4>
+            <p class="text">In creating an early-bird Blockchain start-up investment system, PresalePro is able to increase an investment's safety, Return on investment (ROI), and the likelihood of a fruitful ICO.</p>
+          </li>
+          <li class="faq__item  faq__item--second">
+            <h4 class="faq__subtitle  title  title--font-small">Benefit 2</h4>
+            <p class="text">PresalePro aims to increase an ICO’s return on investment through its “Members Only” platform for ICO presales, by linking visionary and anticipative investors with promising Blockchain-related start - ups.</p>
+          </li>
+          <li class="faq__item  faq__item--third">
+            <h4 class="faq__subtitle  title  title--font-small">Benefit 3</h4>
+            <p class="text">PresalePro’s model is therefore based on a unique blend of business and commercially proven methodologies.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="distribution">
+      <div class="distribution__wrapper">
+        <h3 class="distribution__title  title">Token distribution & sale terms</h3>
+        <div class="distribution__container">
+          <div class="distribution__item">
+            <p class="distribution__key">GENERAL EMISSION:</p>
+            <p class="distribution__value">200.000.000 PST</p>
+          </div>
+          <div class="distribution__item">
+            <p class="distribution__key">soft cap:</p>
+            <p class="distribution__value">$ 3.000.000</p>
+          </div>
+          <div class="distribution__item">
+            <p class="distribution__key">Hard cap:</p>
+            <p class="distribution__value">$ 12.000.000</p>
+          </div>
+          <div class="distribution__item">
+            <p class="distribution__key">Reserve for the development team:</p>
+            <p class="distribution__value">$ 3.000.000</p>
+          </div>
+          <div class="distribution__item">
+            <p class="distribution__key">On sale at the pre-sale stage:</p>
+            <p class="distribution__value">40.000.000 PST</p>
+          </div>
+          <div class="distribution__box">
+            <div class="distribution__item">
+              <p class="distribution__key">Token type:</p>
+              <p class="distribution__value">ERC 20</p>
+            </div>
+            <div class="distribution__item">
+              <p class="distribution__key">Purchase methods:
+              </p>
+              <p class="distribution__value">ERC 20</p>
+            </div>
+          </div>
+        </div>
+        <div class="distribution__diagram">
+          <p class="distribution__share"><b>50%</b>for sale</p>
+          <p class="distribution__share"><b>25%</b>retained by PRESALEPRO</p>
+          <p class="distribution__share"><b>25%</b>for the ecosystem members</p>
+        </div>
+        <a class="btn" href="#"><span class="btn__text  btn__text--icon-list">white list</span></a>
+      </div>
+    </section>
+    <section class="support">
+      <div class="support__wrapper">
+        <h3 class="support__title  title">Supporting the next generation blockchain companie
+        </h3>
+        <p class="support__text  text">PresalePro aims to increase an ICO’s return on investment through its “Members Only” platform for ICO presales, by linking visionary and anticipative investors with promising Blockchain-related start-ups.</p>
+        <a class="btn" href="#"><span class="btn__text  btn__text--icon-bulb">Submit your project</span></a>
+      </div>
+    </section>
+    <section class="timeline">
+      <div class="timeline__wrapper  swiper-container">
+        <h3 class="timeline__title  title">Token sale timeline</h3>
+        <p class="timeline__caption  caption">Nov 29,2018</p>
+        <h4 class="timeline__subtitle  title  title--small-size">Early bird presale</h4>
+        <div class="timeline__slider  swiper-wrapper">
+          <div class="timeline__slide  swiper-slide">
+            <p class="timeline__item"><span>3</span></p>
+            <p class="timeline__text  text">Closed sale for those who passed the KYC and got into the White List.</p>
+          </div>
+          <div class="timeline__slide  swiper-slide">
+            <p class="timeline__item"><span>4</span></p>
+            <p class="timeline__text  text">Closed sale for those who passed the KYC and got into the White List.</p>
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <section class="partners">
+      <div class="partners__wrapper">
+        <h3 class="partners__title  title">Partners</h3>
+        <ul class="partners__list">
+          <li class="partners__logo  partners__logo--first">
+            <!-- <img src="img/partner-logo-1.svg" alt="Partner's logotype"> -->
+          </li>
+          <li class="partners__logo  partners__logo--second">
+            <!-- <img src="img/partner-logo-2.svg" alt="Partner's logotype"> -->
+          </li>
+          <li class="partners__logo  partners__logo--third">
+            <!-- <img src="img/partner-logo-3.svg" alt="Partner's logotype"> -->
+          </li>
+          <li class="partners__logo  partners__logo--fourth">
+            <!-- <img src="img/partner-logo-4.svg" alt="Partner's logotype"> -->
+          </li>
+          <li class="partners__logo  partners__logo--fifth">
+            <!-- <img src="img/partner-logo-5.svg" alt="Partner's logotype"> -->
+          </li>
+          <li class="partners__logo  partners__logo--sixth">
+            <!-- <img src="img/partner-logo-6.svg" alt="Partner's logotype"> -->
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="team">
+      <div class="team__wrapper">
+        <h3 class="team__title  title">Team</h3>
+        <div class="team__slider">
+          <div class="team__slide">
+            <div class="team__face">
+              <img src="img/face-1.jpg" alt="">
+              <div class="team__social  social">
+                <a class="social__link  social__link--facebook" href="#">
+                  <svg class="face" viewBox="0 0 13.9 27" width="14" height="27">
+                    <use xlink:href="img/facebook-white.svg#facebook">
+                  </svg>
+                </a>
+                <a class="social__link  social__link--" href="#"></a>
+              </div>
+            </div>
+            <h4 class="title  title--font-small">John Galt</h4>
+            <p class="caption">founder, evangelist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="press">
+      <div class="press__wrapper">
+        <h3 class="press__title  title">Press</h3>
+        <div class="press__slider">
+          <div class="press__slide">
+            <img src="/img/forbes-logo.svg" alt="">
+            <p class="press__text  text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder
+              of human happiness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <nav class="footer__nav">
+        <div class="footer__nav-container">
+          <h4 class="footer__subtitle">PresalePro</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Stats &amp; Facts</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Media</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">FAQ</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Contact</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Login / Register</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-container">
+          <h4 class="footer__subtitle">For ICOs</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Publish new ICO</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Analyzer</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Premium listing</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Services</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Widgets</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-container">
+          <h4 class="footer__subtitle">For All</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO listing</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">People of Blockchain</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Bounty</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Whitelist</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Agencies</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Exchanges</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Experts</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ROI calculator</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Show Time</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-container">
+          <h4 class="footer__subtitle">Social</h4>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Telegram</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Twitter</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Facebook</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Medium</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Bitcoin Talk</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">GitHub</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">LinkedIn</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Reddit</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <h4 class="footer__subtitle">Get Updates</h4>
+        <p class="footer__text  text  text--color-white">Filling the form above doesn’t oblige you to anything. We’ll just add you to our mailing list.</p>
+        <form class="footer__form" action="#" method="POST">
+          <input type="email" placeholder="Email">
+          <button class="btn" type="submit"><span class="btn__text  btn__text--icon-update">Get Updates</span></button>
+        </form>
+      </div>
+      <div class="footer__definition">
+        <img src="/img/presale.svg" alt="">
+        <p class="text  text--color-white  text--font-small">PresalePro is an ICO rating platform supported by investors and financial experts.</p>
+      </div>
+      <div class="footer__copyright">
+        <ul class="footer__submenu-list">
+          <li class="footer__submenu-item"><a href="#">Terms</a></li>
+          <li class="footer__submenu-item"><a href="#">Privacy policy</a></li>
+          <li class="footer__submenu-item"><a href="#">Rating methodology</a></li>
+        </ul>
+        <p class="text  text--color-white  text--font-small">© 2017 - 2018 All rights reserved</p>
+      </div>
+    </div>
+  </footer>
   <script src="js/bundle.js" type="module"></script>
 </body>
 

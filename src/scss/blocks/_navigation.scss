@@ -1,7 +1,28 @@
 .navigation {
+  position: fixed;
+  z-index: 10;
+  top: 13px;
+  left: 15px;
+  right: 16px;
+  &::before {
+    @include easeOut;
+    opacity: 0;
+  }
+  &--in-view {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -13px;
+      right: -16px;
+      bottom: -13px;
+      left: -15px;
+      opacity: 1;
+      box-shadow: 0 3px 8px 3px rgba(100, 65, 163, 0.4);
+      background-image: linear-gradient(to right, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+    }
+  }
   &--active {
-    position: fixed;
-    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;

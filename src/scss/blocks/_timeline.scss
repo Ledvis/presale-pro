@@ -1,17 +1,23 @@
 .timeline {
   &__wrapper {
     @include container;
+    position: relative;
     padding: 16px 15px 17px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 191px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: rgba(101, 65, 163, 0.3);
+    }
   }
   &__title {
     margin-bottom: 33px;
   }
   &__subtitle {
     margin-bottom: 36px;
-  }
-  &__slide {
-    width: 220px !important;
-    margin: 30px !important;
   }
   &__item {
     position: relative;
@@ -73,12 +79,46 @@
     }
   }
   &__text {
+    padding: 0 50px;
     text-align: center;
+  }
+  &__slider {}
+  .swiper-slide {
+    width: 220px;
   }
   .swiper-button-prev,
   .swiper-button-next {
+    top: 175px;
+    z-index: 5;
     width: 35px;
     height: 35px;
-    background-image: linear-gradient(to right, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+    margin-top: initial;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%); // &::before {
+    background-size: contain;
+    &::before {
+      @include absolute-center;
+      content: "";
+      width: 14px;
+      height: 20px;
+      background: url("/img/icon-arrow.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+  .swiper-button-next {
+    &::before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    background-image: linear-gradient(to right, red 0%, blue 100%); // &::before {
+    &::before {
+      width: 10px;
+      height: 10px;
+      background: url("/img/icon-close.svg") no-repeat center;
+      background-size: cover;
+    }
   }
 }

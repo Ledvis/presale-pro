@@ -1,6 +1,7 @@
 .social {
   transform: rotate(-45deg);
   &__link {
+    @include easeOut;
     position: relative;
     display: block;
     width: 32px;
@@ -12,19 +13,24 @@
     &:not(:last-of-type) {
       margin-right: 16px;
     }
-    &::before {
-      position: absolute;
-      content: "";
-      top: 5px;
-      right: 10px;
-    }
     &--facebook {
-      &::before {
-        background: url("../img/icon-facebook.png") no-repeat center;
-        background-size: cover;
-        width: 11px;
-        height: 21px;
-        transform: rotate(45deg);
+      svg {
+        transform: rotate(45deg) translate(2px, 4px);
+      }
+    }
+    &--linkedin {
+      svg {
+        transform: rotate(45deg) translate(5px, 2px);
+      }
+    }
+    svg {
+      @include easeOut;
+      fill: rgb(170, 170, 170);
+    }
+    &:hover {
+      background-color: rgb(70, 100, 188);
+      svg {
+        fill: rgb(255, 255, 255);
       }
     }
   }

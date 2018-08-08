@@ -37,12 +37,13 @@
       &::before {
         width: 151px;
         height: 87px;
-        background-color: rgba(grey, 0.4);
+        background: url("/img/icon-01.svg") no-repeat center;
+        background-size: cover;
       }
       &::after {
         width: 220px;
         height: 180px;
-        background: url("../img/benefit-first.svg") no-repeat center;
+        background: url("/img/benefit-first.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -52,12 +53,13 @@
         width: 170px;
         height: 87px;
         right: 0;
-        background-color: rgba(grey, 0.4);
+        background: url("/img/icon-02.svg") no-repeat center;
+        background-size: cover;
       }
       &::after {
         width: 187px;
         height: 150px;
-        background: url("../img/benefit-second.svg") no-repeat center;
+        background: url("/img/benefit-second.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -66,12 +68,13 @@
       &::before {
         width: 171px;
         height: 87px;
-        background-color: rgba(grey, 0.4);
+        background: url("/img/icon-03.svg") no-repeat center;
+        background-size: cover;
       }
       &::after {
         width: 243px;
         height: 210px;
-        background: url("../img/benefit-third.svg") no-repeat center;
+        background: url("/img/benefit-third.svg") no-repeat center;
         background-size: cover;
       }
     }

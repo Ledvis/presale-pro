@@ -1,5 +1,6 @@
 .btn {
   @include button-reset;
+  @include easeOut;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +10,13 @@
   box-shadow: 0 3px 7px 2px rgba(100, 65, 163, 0.4);
   border-radius: 22px;
   box-sizing: border-box;
-  background-image: linear-gradient(-269deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+  background-image: linear-gradient(-269deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%); // background-size: auto 200%;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  &:hover {
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+  }
   &__text {
     position: relative;
     color: rgb(255, 255, 255);
@@ -28,7 +35,7 @@
         left: -30px;
         width: 17px;
         height: 20px;
-        background: url("../img/icon-play.svg") no-repeat center;
+        background: url("/img/icon-play.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -37,7 +44,7 @@
         left: -35px;
         width: 19px;
         height: 20px;
-        background: url("../img/icon-list.svg") no-repeat center;
+        background: url("/img/icon-list.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -46,7 +53,7 @@
         left: -30px;
         width: 17px;
         height: 20px;
-        background: url("../img/icon-bulb.svg") no-repeat center;
+        background: url("/img/icon-bulb.svg") no-repeat center;
         background-size: cover;
       }
     }
@@ -55,7 +62,7 @@
         left: -35px;
         width: 20px;
         height: 20px;
-        background: url("../img/icon-update.svg") no-repeat center;
+        background: url("/img/icon-update.svg") no-repeat center;
         background-size: cover;
       }
     }

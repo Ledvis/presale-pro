@@ -15,9 +15,18 @@ function toggleMenu() {
   }
 }
 
+function showInView() {
+  if (window.scrollY >= 5) {
+    mainNav.classList.add('navigation--in-view');
+  } else {
+    mainNav.classList.remove('navigation--in-view');
+  }
+}
+
 export default function init() {
   menuToggler.addEventListener('click', (event) => {
     event.preventDefault();
     toggleMenu();
   });
+  window.addEventListener('scroll', showInView);
 }
