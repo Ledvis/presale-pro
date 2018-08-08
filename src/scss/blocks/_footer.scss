@@ -1,0 +1,145 @@
+.footer {
+  background-image: linear-gradient(to right, rgb(38, 27, 87) 0%, rgb(63, 70, 157) 100%);
+  &__wrapper {
+    @include container;
+    padding: 30px 15px 0;
+  }
+  &__subtitle {
+    margin: 0 0 18px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1.08px;
+  }
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__nav-container {
+    margin-bottom: 37px;
+    &:nth-of-type(even) {
+      flex-basis: 45%;
+    }
+    &:nth-of-type(odd) {
+      flex-basis: 55%;
+    }
+  }
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__nav-item {
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+  &__nav-link {
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.84px;
+    text-decoration: none;
+  }
+  &__text {
+    margin-bottom: 27px;
+  }
+  &__form {
+    position: relative;
+    margin-bottom: 35px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 20px;
+      background: url("/img/icon-mail.svg") no-repeat center;
+      background-size: cover;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 27px;
+      padding: 4px 10px 16px 37px;
+      color: rgb(255, 255, 255);
+      font-family: $main-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.96px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      box-sizing: border-box;
+      &::placeholder {
+        color: rgb(255, 255, 255);
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.96px;
+      }
+    }
+  }
+  &__definition {
+    display: flex;
+    margin-bottom: 25px;
+    img {
+      margin-right: 15px;
+    }
+  }
+  &__copyright {
+    position: relative;
+    z-index: 0;
+    padding: 10px 0;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -15px;
+      bottom: 0;
+      left: -15px;
+      background-color: rgb(51, 49, 122);
+    }
+  }
+  &__submenu-list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__submenu-item {
+    position: relative;
+    margin: 0;
+    &:not(:last-of-type) {
+      margin-right: 13px;
+      &::before {
+        content: "|";
+        position: absolute;
+        right: -7px;
+        top: 0;
+        color: rgb(255, 255, 255);
+        font-family: $main-font;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: 0.72px;
+      }
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-family: $main-font;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 30px;
+      letter-spacing: 0.72px;
+    }
+  }
+}

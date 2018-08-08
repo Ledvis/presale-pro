@@ -1,0 +1,15 @@
+.title {
+  margin: 0;
+  color: rgb(70, 100, 188);
+  font-family: $main-font;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28.99px;
+  letter-spacing: 1.26px;
+  text-align: center;
+  &--font-small {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

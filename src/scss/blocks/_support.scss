@@ -1,0 +1,34 @@
+.support {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    background-color: rgb(250, 250, 250);
+    transform: skewY(10deg);
+  }
+  &__wrapper {
+    @include container;
+    position: relative;
+    padding: 76px 15px 80px;
+    &::before {
+      @include horizontal-center;
+      content: "";
+      bottom: 155px;
+      width: 261px;
+      height: 154px;
+      background: url("../img/turbine.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+  &__title {
+    margin-bottom: 18px;
+  }
+  &__text {
+    margin-bottom: 210px;
+  }
+}

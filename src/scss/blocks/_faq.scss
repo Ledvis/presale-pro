@@ -1,0 +1,88 @@
+.faq {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    background-color: rgb(250, 250, 250);
+    transform: skewY(-10deg);
+  }
+  &__wrapper {
+    @include container;
+    padding: 46px 15px 47px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+    &::after {
+      @include horizontal-center;
+      content: "";
+      top: 40px;
+    }
+    &--first {
+      padding-top: 240px;
+      &::before {
+        width: 151px;
+        height: 87px;
+        background-color: rgba(grey, 0.4);
+      }
+      &::after {
+        width: 220px;
+        height: 180px;
+        background: url("../img/benefit-first.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--second {
+      padding-top: 215px;
+      &::before {
+        width: 170px;
+        height: 87px;
+        right: 0;
+        background-color: rgba(grey, 0.4);
+      }
+      &::after {
+        width: 187px;
+        height: 150px;
+        background: url("../img/benefit-second.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--third {
+      padding-top: 275px;
+      &::before {
+        width: 171px;
+        height: 87px;
+        background-color: rgba(grey, 0.4);
+      }
+      &::after {
+        width: 243px;
+        height: 210px;
+        background: url("../img/benefit-third.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 36px;
+    }
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+}

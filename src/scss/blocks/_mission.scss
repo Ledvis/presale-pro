@@ -1,0 +1,22 @@
+.mission {
+  &__wrapper {
+    @include container;
+    padding: 50px 15px 20px;
+  }
+  &__caption {
+    margin: 0 0 10px;
+    color: rgb(1, 1, 1);
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__title {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  &__text {
+    margin-bottom: 27px;
+  }
+}

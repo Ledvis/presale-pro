@@ -1,0 +1,29 @@
+.team {
+  &__wrapper {
+    @include container;
+    padding: 16px 15px 17px;
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__slide {
+    width: 220px;
+    margin: 0 auto;
+  }
+  &__face {
+    position: relative;
+    margin: 0 auto 22px;
+    text-align: center;
+    box-sizing: border-box;
+    img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+  &__social {
+    position: absolute;
+    bottom: 30px;
+    left: 115px;
+    display: flex;
+  }
+}

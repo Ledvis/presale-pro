@@ -1,0 +1,103 @@
+.distribution {
+  &__wrapper {
+    @include container;
+    padding: 36px 15px 20px;
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__item {
+    border-radius: 10px;
+    border: 1px solid rgb(101, 65, 163);
+    overflow: hidden;
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  &__key {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    margin: 0;
+    padding: 0 11px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    background-image: linear-gradient(-268deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+  }
+  &__value {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    margin: 0;
+    padding: 0 11px;
+    color: rgb(70, 100, 188);
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.08px;
+  }
+  &__container {
+    margin-bottom: 50px;
+  }
+  &__box {
+    display: flex;
+    div {
+      flex-grow: 1;
+      flex-basis: 40%;
+      &:not(:last-of-type) {
+        margin: 0 30px 0 0;
+      }
+    }
+  }
+  &__diagram {
+    position: relative;
+    margin-bottom: 40px;
+    padding-top: 236px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 16px;
+      width: 224px;
+      height: 326px;
+      background: url("../img/diagram.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+  &__share {
+    position: relative;
+    margin: 0;
+    color: rgb(1, 1, 1);
+    font-family: $main-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    b {
+      display: block;
+      color: rgb(70, 100, 188);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    &:nth-of-type(1) {
+      left: 199px;
+    }
+    &:nth-of-type(2) {
+      top: -6px;
+      left: 106px;
+    }
+    &:nth-of-type(3) {
+      top: -12px;
+      left: 33px;
+    }
+  }
+}

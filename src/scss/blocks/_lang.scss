@@ -1,0 +1,115 @@
+.lang {
+  @include element-invisible;
+  &__value {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-of-type) {
+      margin-right: 21px;
+    }
+    &--active {
+      a {
+        color: rgb(0, 253, 254);
+        &::before {
+          background-color: rgb(0, 253, 254);
+        }
+      }
+    }
+  }
+  &__link {
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    text-decoration: none;
+    &::before {
+      @include easeOut;
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      right: 0;
+      height: 2px;
+    }
+  }
+}
+
+@include media-min($desktop-width) {
+  .lang {
+    position: relative;
+    display: block;
+    &__value {
+      @include button-reset;
+      position: relative;
+      padding: 10px 24px 10px 4px;
+      color: rgb(255, 255, 255);
+      font-family: $main-font;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+      &::before {
+        @include vertical-center;
+        content: "";
+        right: 3px;
+        width: 15px;
+        height: 10px;
+        background: url("/img/arrow-bottom-yellow.svg") no-repeat center;
+        background-size: cover;
+      }
+      &:hover~.lang__list,
+      &:focus-within~.lang__list {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+    &__list {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+      transition: opacity 0.35s;
+      &:hover,
+      &:focus {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+    &__item {
+      &:not(:last-of-type) {
+        border-bottom: 2px solid rgb(224, 224, 224);
+      }
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 33px;
+      background-color: rgb(249, 250, 252);
+      transition: all 0.35s;
+      box-sizing: border-box;
+      &:hover,
+      &--active {
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        background-color: rgb(255, 214, 44);
+      }
+    }
+  }
+}

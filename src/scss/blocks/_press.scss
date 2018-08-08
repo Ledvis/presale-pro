@@ -1,0 +1,26 @@
+.press {
+  &__wrapper {
+    @include container;
+    padding: 76px 15px 40px;
+  }
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__slide {
+    text-align: center;
+  }
+  &__text {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 40px;
+    &::before {
+      @include horizontal-center;
+      content: "";
+      top: 0;
+      width: 25px;
+      height: 20px;
+      background: url("/img/icon-comment.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+}

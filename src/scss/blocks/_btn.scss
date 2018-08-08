@@ -1,0 +1,63 @@
+.btn {
+  @include button-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  box-shadow: 0 3px 7px 2px rgba(100, 65, 163, 0.4);
+  border-radius: 22px;
+  box-sizing: border-box;
+  background-image: linear-gradient(-269deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+  &__text {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+    &::before {
+      @include vertical-center;
+      content: "";
+    }
+    &--icon-play {
+      &::before {
+        left: -30px;
+        width: 17px;
+        height: 20px;
+        background: url("../img/icon-play.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--icon-list {
+      &::before {
+        left: -35px;
+        width: 19px;
+        height: 20px;
+        background: url("../img/icon-list.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--icon-bulb {
+      &::before {
+        left: -30px;
+        width: 17px;
+        height: 20px;
+        background: url("../img/icon-bulb.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &--icon-update {
+      &::before {
+        left: -35px;
+        width: 20px;
+        height: 20px;
+        background: url("../img/icon-update.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}
