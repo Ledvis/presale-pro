@@ -1,19 +1,19 @@
 @mixin container {
-  @include border-box;
   width: auto;
   margin: 0 auto;
-  @media #{$tablet-width} {
+  box-sizing: border-box;
+  @include media-min($tablet-width) {
     width: 768px;
   }
-  @media #{$desktop-width} {
+  @include media-min($tablet-width) {
     width: 1170px;
   }
 }
 
 @mixin container-fluid {
-  @include border-box;
   width: auto;
   margin: 0 auto;
+  box-sizing: border-box;
   @media #{$tablet-width} {
     width: 75%;
   }
@@ -129,14 +129,6 @@
   }
 }
 
-@mixin element($name) {
-  @at-root #{&}__#{$name} {
-    @content;
-  }
-}
-
-@mixin modifier($name) {
-  @at-root #{&}--#{$name} {
-    @content;
-  }
+@mixin easeOut {
+  transition: all 0.5s ease-out;
 }

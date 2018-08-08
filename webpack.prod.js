@@ -48,6 +48,11 @@ module.exports = merge(common, {
       optipng: {
         optimizationLevel: 3,
       },
+      svgo: {
+        plugins: [{
+          cleanupIDs: false,
+        }],
+      },
       plugins: [
         imageminMozjpeg({
           quality: 70,

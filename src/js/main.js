@@ -1,3 +1,5 @@
-console.log('It works');
+import initMenu from './menu';
+import initSlider from './slider';
 
-let test;
+initMenu();
+initSlider();

@@ -53,6 +53,7 @@
     "stylelint": "^9.2.1",
     "stylelint-config-idiomatic-order": "^5.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
+    "swiper": "^4.3.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.10.0",
     "webpack-merge": "^4.1.2"

@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Neo Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Neo Sans Pro Regular"), local("NeoSansPro-Regular"), url("../fonts/NeoSansPro-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neo Sans Pro";
+  font-family: Rubik;
   font-style: normal;
   font-weight: 300;
-  src: local("Neo Sans Pro Light"), local("NeoSansPro-Light"), url("../fonts/NeoSansPro-Light.ttf") format("truetype");
+  src: local("Rubik Light"), local("Rubik-Light"), url("/fonts/Rubik-Light.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Neo Sans Pro";
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rubik Regular"), local("Rubik-Regular"), url("/fonts/Rubik-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
-  src: local("Neo Sans Pro Bold"), local("NeoSansPro-Bold"), url("../fonts/NeoSansPro-Bold.ttf") format("truetype");
+  src: local("Rubik Medium"), local("Rubik-Medium"), url("/fonts/Rubik-Medium.ttf") format("truetype");
   font-display: swap;
 }
