@@ -3,12 +3,12 @@
 @import "global/scaffolding";
 @import "functions";
 @import "mixins";
-@import "blocks/header";
-@import "blocks/navigation";
 @import "blocks/text";
 @import "blocks/title";
 @import "blocks/caption";
 @import "blocks/btn";
+@import "blocks/header";
+@import "blocks/navigation";
 @import "blocks/mission";
 @import "blocks/faq";
 @import "blocks/distribution";
@@ -20,3 +20,4 @@
 @import "blocks/press";
 @import "blocks/footer";
 @import "blocks/lang";
+@import "blocks/swiper";

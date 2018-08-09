@@ -89,3 +89,33 @@
     margin-bottom: 20px;
   }
 }
+
+@include media-min($tablet-width) {
+  .faq {
+    &::before {
+      top: 30px;
+      bottom: 30px;
+      transform: skewY(-5deg);
+    }
+    &__wrapper {
+      padding: 75px 80px;
+    }
+    &__item {
+      &--first {
+        &::before {
+          left: 174px;
+        }
+      }
+      &--second {
+        &::before {
+          right: 180px;
+        }
+      }
+      &--third {
+        &::before {
+          left: 170px;
+        }
+      }
+    }
+  }
+}

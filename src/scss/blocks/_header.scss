@@ -42,3 +42,26 @@
     text-align: center;
   }
 }
+
+@include media-min($tablet-width) {
+  .header {
+    &::before {
+      bottom: 40px;
+      width: 445px;
+      height: 513px;
+    }
+    &__wrapper {
+      padding: 244px 15px 585px;
+    }
+    &__title {
+      margin-bottom: 41px;
+      font-size: 45px;
+      line-height: 56px;
+    }
+    &__text {
+      padding: 0 180px;
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+}

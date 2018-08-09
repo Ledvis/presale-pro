@@ -9,3 +9,10 @@
   letter-spacing: 0.72px;
   text-align: center;
 }
+
+@include media-min($tablet-width) {
+  .caption {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

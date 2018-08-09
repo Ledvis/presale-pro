@@ -13,3 +13,10 @@
     letter-spacing: 0.72px;
   }
 }
+
+@include media-min($tablet-width) {
+  .text {
+    font-size: 19px;
+    line-height: 27px;
+  }
+}

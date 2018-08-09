@@ -101,3 +101,58 @@
     }
   }
 }
+
+@include media-min($tablet-width) {
+  .distribution {
+    &__wrapper {
+      padding: 15px 80px 20px;
+    }
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex-grow: 1;
+      width: 40%;
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(-n+4) {
+        margin-bottom: 15px;
+      }
+      &:nth-last-of-type(even) {
+        margin-right: 30px;
+      }
+    }
+    &__box {
+      flex-grow: 1;
+      width: 40%;
+      div {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__diagram {
+      margin-bottom: 108px;
+      padding: 30px 0 0 370px;
+      &::before {
+        left: 0;
+        width: 610px;
+        height: 237px;
+        background: url("/img/diagram-tl.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    &__share {
+      position: static;
+      text-align: right;
+      &:not(:last-of-type) {
+        margin-bottom: 23px;
+      }
+    }
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}

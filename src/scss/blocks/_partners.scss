@@ -30,53 +30,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
-    background-color: rgba(gray, 0.4);
     &:not(:last-of-type) {
       margin-bottom: 40px;
     }
     &--first {
       width: 30%;
-      img {
-        width: 73px;
-        height: 45px;
-      }
+      img {}
     }
     &--second {
       width: 30%;
-      img {
-        width: 39px;
-        height: 45px;
-      }
+      img {}
     }
     &--third {
       width: 30%;
-      img {
-        width: 73px;
-        height: 28px;
-      }
+      img {}
     }
     &--fourth {
       width: 40%;
-      img {
-        width: 125px;
-        height: 25px;
-      }
+      img {}
     }
     &--fifth {
       width: 40%;
-      img {
-        width: 121px;
-        height: 25px;
-      }
+      img {}
     }
     &--sixth {
       width: 100%;
-      img {
-        width: 97px;
-        height: 25px;
-      }
+      img {}
+    }
+  }
+}
+
+@include media-min($tablet-width) {
+  .partners {
+    &::before {
+      top: 30px;
+      bottom: 30px;
+      transform: skewY(-5deg);
+    }
+    &__wrapper {
+      padding: 75px 80px 80px;
     }
   }
 }

@@ -5,12 +5,7 @@
   }
   &__caption {
     margin: 0 0 10px;
-    color: rgb(1, 1, 1);
-    font-family: $main-font;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: uppercase;
+    text-align: left;
   }
   &__title {
     margin-bottom: 18px;
@@ -18,5 +13,22 @@
   }
   &__text {
     margin-bottom: 27px;
+  }
+}
+
+@include media-min($tablet-width) {
+  .mission {
+    &__wrapper {
+      padding: 50px 80px 20px;
+    }
+    &__caption {
+      margin-bottom: 13px;
+    }
+    &__title {
+      margin-bottom: 17px;
+    }
+    &__text {
+      margin-bottom: 26px;
+    }
   }
 }

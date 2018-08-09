@@ -111,6 +111,10 @@
         left: -15px;
         width: 2px;
       }
+      &:hover,
+      &:focus {
+        color: rgb(0, 253, 254);
+      }
     }
     &--active {
       a {

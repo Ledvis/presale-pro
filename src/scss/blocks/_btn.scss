@@ -7,15 +7,13 @@
   width: 100%;
   padding: 0 20px;
   text-decoration: none;
-  box-shadow: 0 3px 7px 2px rgba(100, 65, 163, 0.4);
+  box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
   box-sizing: border-box;
-  background-image: linear-gradient(-269deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%); // background-size: auto 200%;
-  background-position: 0 0;
-  background-size: 100% 100%;
+  background-image: linear-gradient(-269deg, rgb(101, 65, 163) 0%, rgb(137, 94, 212) 25%, rgb(96, 126, 214) 50%, rgb(70, 100, 188) 100%);
+  background-size: 300% 100%;
   &:hover {
-    background-size: 200% 200%;
-    background-position: 100% 100%;
+    background-position: 100% 0;
   }
   &__text {
     position: relative;
@@ -66,5 +64,11 @@
         background-size: cover;
       }
     }
+  }
+}
+
+@include media-min($tablet-width) {
+  .btn {
+    width: 290px;
   }
 }

@@ -1,7 +1,20 @@
 .press {
+  position: relative;
+  overflow-y: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: 0;
+    bottom: -50px;
+    left: 0;
+    background-color: rgb(250, 250, 250);
+    transform: skewY(10deg);
+  }
   &__wrapper {
     @include container;
-    padding: 76px 15px 40px;
+    padding: 76px 15px 100px;
   }
   &__title {
     margin-bottom: 36px;
@@ -21,6 +34,26 @@
       height: 20px;
       background: url("/img/icon-comment.svg") no-repeat center;
       background-size: cover;
+    }
+  }
+  &__control {
+    top: initial;
+    bottom: 41px;
+  }
+}
+
+@include media-min($tablet-width) {
+  .press {
+    &::before {
+      top: 40px;
+      bottom: -60px;
+      transform: skewY(5deg);
+    }
+    &__wrapper {
+      padding: 75px 80px 100px;
+    }
+    &__control {
+      bottom: 37px;
     }
   }
 }

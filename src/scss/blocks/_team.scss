@@ -12,6 +12,7 @@
   }
   &__face {
     position: relative;
+    width: 220px;
     margin: 0 auto 22px;
     text-align: center;
     box-sizing: border-box;
@@ -25,5 +26,22 @@
     bottom: 30px;
     left: 115px;
     display: flex;
+  }
+  &__control {
+    top: initial;
+    bottom: 19px;
+  }
+}
+
+@include media-min($tablet-width) {
+  .team {
+    &__wrapper {
+      padding: 15px 80px;
+    }
+    &__subtitle {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }

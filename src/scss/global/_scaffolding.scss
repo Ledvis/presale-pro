@@ -1,4 +1,10 @@
 @import "node_modules/normalize-scss/sass/normalize/import-now";
+* {
+  &:focus {
+    outline: none;
+  }
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -17,6 +23,8 @@ audio {
   height: auto;
 }
 
-body {
+header,
+main,
+footer {
   overflow-x: hidden;
 }
