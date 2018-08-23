@@ -14,6 +14,9 @@
   &__text {
     margin-bottom: 27px;
   }
+  &__btn {
+    margin-bottom: 50px;
+  }
 }
 
 @include media-min($tablet-width) {
@@ -29,6 +32,56 @@
     }
     &__text {
       margin-bottom: 26px;
+    }
+  }
+}
+
+@include media-min($desktop-width) {
+  .mission {
+    position: relative;
+    z-index: 1;
+    &__wrapper {
+      position: relative;
+      display: flex;
+      padding: 65px 210px 145px 15px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        width: 1884px;
+        height: 1112px;
+      }
+      &::before {
+        top: -223px;
+        left: -1950px;
+        background: url("/img/rect-shape.png") no-repeat center;
+      }
+      &::after {
+        top: -400px;
+        right: -1800px;
+        background: url("/img/rect-shape-icon.png") no-repeat center;
+      }
+    }
+    &__container {
+      flex-grow: 1;
+      margin-right: 30px;
+    }
+    &__calc {
+      flex: 0 0 360px;
+    }
+    &__caption {
+      margin-bottom: 10px;
+    }
+    &__title {
+      margin-bottom: 29px;
+    }
+    &__text {
+      margin-bottom: 42px;
+    }
+    &__btn {
+      margin-bottom: 0;
     }
   }
 }

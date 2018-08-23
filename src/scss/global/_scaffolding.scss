@@ -28,3 +28,15 @@ main,
 footer {
   overflow-x: hidden;
 }
+
+@include media-min($desktop-width) {
+  header,
+  main,
+  footer {
+    overflow-x: initial;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}

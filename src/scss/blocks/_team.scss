@@ -16,7 +16,18 @@
     margin: 0 auto 22px;
     text-align: center;
     box-sizing: border-box;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url("/img/face-hover.svg") no-repeat center;
+      background-size: cover;
+    }
     img {
+      display: block;
       width: 220px;
       height: 220px;
     }
@@ -42,6 +53,64 @@
       margin-bottom: 10px;
       font-size: 18px;
       line-height: 18px;
+    }
+  }
+}
+
+@include media-min($desktop-width) {
+  .team {
+    &__wrapper {
+      position: relative;
+      padding: 37px 30px 204px;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 380px;
+        left: -1980px;
+        background: url("/img/rect-shape.png") no-repeat center;
+        background-size: cover;
+        width: 1871px;
+        height: 1073px;
+      }
+    }
+    &__subtitle {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+    &__slider {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__title {
+      margin-bottom: 65px;
+    }
+    &__slide {
+      width: 330px;
+      margin: 0;
+      &:not(:nth-of-type(-n+3)) {
+        margin-top: 46px;
+      }
+    }
+    &__face {
+      width: 330px;
+      margin-bottom: 31px;
+      img {
+        width: 330px;
+        height: 330px;
+      }
+    }
+    &__subtitle {
+      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+    &__social {
+      left: 174px;
+    }
+    &__control {
+      display: none;
     }
   }
 }

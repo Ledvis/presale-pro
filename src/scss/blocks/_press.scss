@@ -57,3 +57,39 @@
     }
   }
 }
+
+@include media-min($desktop-width) {
+  .press {
+    &::before {
+      top: 40px;
+      bottom: -60px;
+      transform: skewY(5deg);
+    }
+    &__wrapper {
+      padding: 135px 180px 118px;
+    }
+    &__control {
+      bottom: 150px;
+    }
+    &__title {
+      margin-bottom: 64px;
+    }
+    &__slide {
+      img {
+        width: 110px;
+        height: 29px;
+      }
+    }
+    &__text {
+      margin-top: 60px;
+      padding-top: 45px;
+      &::before {
+        width: 31px;
+        height: 25px;
+      }
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+      bottom: 75px;
+    }
+  }
+}

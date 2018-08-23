@@ -1,23 +1,48 @@
 .header {
   position: relative;
-  &::before {
-    @include horizontal-center;
-    bottom: 25px;
-    content: "";
-    width: 290px;
-    height: 334px;
-    background: url("/img/header-illustration.svg") no-repeat center;
-    background-size: cover;
-  }
   &::after {
     @include horizontal-center;
     content: "";
     z-index: -1;
     bottom: 0;
     width: 1922px;
-    height: 1660px;
-    background: url("/img/header-bg.png") no-repeat center;
+    height: 870px;
+    background: url("/img/header-bg-mb.png") no-repeat center;
     background-size: contain;
+  }
+  &__img {
+    @include horizontal-center;
+    position: absolute;
+    bottom: 25px;
+    width: 290px;
+    height: 334px;
+    .flame-animation {
+      transform: scaleY(0);
+      animation-name: flame;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+    .st148 {
+      transform-origin: 0 140px;
+    }
+    .st120 {
+      transform-origin: 0 90px;
+    }
+    .st135 {
+      transform-origin: 0 130px;
+    }
+    .flame-group {
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
+          .flame-animation {
+            animation-delay: $i * 0.5s;
+          }
+        }
+      }
+    }
   }
   &__wrapper {
     @include container;
@@ -45,7 +70,11 @@
 
 @include media-min($tablet-width) {
   .header {
-    &::before {
+    &::after {
+      width: 1922px;
+      height: 1660px;
+    }
+    &__img {
       bottom: 40px;
       width: 445px;
       height: 513px;
@@ -63,5 +92,54 @@
       font-size: 21px;
       line-height: 29px;
     }
+  }
+}
+
+@include media-min($desktop-width) {
+  .header {
+    &::after {
+      @include horizontal-center;
+      content: "";
+      z-index: -1;
+      bottom: 0;
+      width: 5768px;
+      height: 1685px;
+      background: url("/img/header-dt-bg.png") no-repeat center;
+      background-size: cover;
+    }
+    &__img {
+      bottom: 30px;
+      width: 472px;
+      height: 547px;
+    }
+    &__wrapper {
+      padding: 146px 15px 620px;
+    }
+    &__box {
+      position: fixed;
+      top: 20px;
+    }
+    &__container {
+      padding: 0 160px;
+    }
+    &__title {
+      font-size: 60px;
+      line-height: 80px;
+      letter-spacing: 3.6px;
+    }
+    &__text {
+      padding: 0 150px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+}
+
+@keyframes flame {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }

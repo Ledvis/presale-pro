@@ -72,3 +72,14 @@
     width: 290px;
   }
 }
+
+@include media-min($desktop-width) {
+  .btn {
+    width: 360px;
+    border-radius: 30px;
+    &__text {
+      font-size: 19px;
+      line-height: 60px;
+    }
+  }
+}

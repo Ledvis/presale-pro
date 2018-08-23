@@ -1,8 +1,8 @@
 @import "variables";
+@import "mixins";
+@import "functions";
 @import "global/fonts";
 @import "global/scaffolding";
-@import "functions";
-@import "mixins";
 @import "blocks/text";
 @import "blocks/title";
 @import "blocks/caption";
@@ -21,3 +21,4 @@
 @import "blocks/footer";
 @import "blocks/lang";
 @import "blocks/swiper";
+@import "blocks/calc";

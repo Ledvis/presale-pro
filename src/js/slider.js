@@ -11,13 +11,15 @@ export default function init() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    slidesPerView: 5,
+    spaceBetween: 60,
+    slideToClickedSlide: 'true',
     breakpoints: {
       // when window width is <= 767px
       767: {
         slidesPerView: 1,
         spaceBetween: 30,
       },
-      // when window width is <= 1169px
       1169: {
         slidesPerView: 3,
         spaceBetween: 50,
@@ -35,15 +37,16 @@ export default function init() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    loop: true,
     breakpoints: {
       // when window width is <= 767px
       767: {
+        loop: true,
         slidesPerView: 1,
         spaceBetween: 30,
       },
       // when window width is <= 1169px
       1169: {
+        loop: true,
         slidesPerView: 2,
         spaceBetween: 55,
       },
@@ -66,6 +69,7 @@ export default function init() {
     },
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 200,
     breakpoints: {
       // when window width is <= 767px
       767: {
@@ -78,4 +82,14 @@ export default function init() {
     },
   });
   pressSwiper.slideTo(2, 1000, false);
+
+  function mediaListener(screenSize) {
+    if (screenSize.matches) {
+      teamSwiper.destroy(true, true);
+    }
+  }
+
+  const breakpoint = window.matchMedia('(min-width: 1169px)');
+  mediaListener(breakpoint);
+  breakpoint.addListener(mediaListener);
 }

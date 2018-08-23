@@ -16,3 +16,10 @@
     line-height: 14px;
   }
 }
+
+@include media-min($desktop-width) {
+  .caption {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}

@@ -119,3 +119,68 @@
     }
   }
 }
+
+@include media-min($desktop-width) {
+  .faq {
+    overflow: hidden;
+    &::before {
+      z-index: -1;
+      top: 30px;
+      bottom: 30px;
+      left: -120px;
+      transform: skewY(-31deg) scale(1.6);
+    }
+    &__wrapper {
+      padding: 132px 15px 160px;
+    }
+    &__title {
+      margin-bottom: 62px;
+    }
+    &__list {
+      display: flex;
+    }
+    &__item {
+      flex-grow: 1;
+      flex-basis: 25%;
+      padding-top: 260px;
+      &:not(:last-of-type) {
+        margin: 0 25px 0 0;
+      }
+      &::before {
+        z-index: -1;
+        top: -135px;
+        left: 0;
+      }
+      &--first {
+        &::before {
+          width: 230px;
+          height: 135px;
+        }
+        &::after {
+          top: 25px;
+        }
+      }
+      &--second {
+        &::before {
+          width: 259px;
+          height: 135px;
+        }
+        &::after {
+          top: 30px;
+        }
+      }
+      &--third {
+        &::before {
+          width: 261px;
+          height: 135px;
+        }
+        &::after {
+          top: 0;
+        }
+      }
+    }
+    &__subtitle {
+      margin-bottom: 35px;
+    }
+  }
+}

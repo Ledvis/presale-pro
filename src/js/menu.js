@@ -1,5 +1,7 @@
 const menuToggler = document.querySelector('.navigation__toggler');
 const mainNav = document.querySelector('.navigation');
+const langList = document.querySelector('.lang__list');
+const langValue = document.querySelector('.lang__value');
 
 let isMenuActive = false;
 
@@ -28,5 +30,11 @@ export default function init() {
     event.preventDefault();
     toggleMenu();
   });
+
   window.addEventListener('scroll', showInView);
+
+  langValue.addEventListener('click', () => {
+    langValue.classList.toggle('lang__value--active');
+    langList.classList.toggle('lang__list--active');
+  });
 }

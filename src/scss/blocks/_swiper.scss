@@ -1,5 +1,6 @@
 .swiper-button-prev,
 .swiper-button-next {
+  @include easeOut;
   z-index: 5;
   width: 35px;
   height: 35px;
@@ -7,6 +8,7 @@
   border-radius: 50%;
   background-image: linear-gradient(to right, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%); // &::before {
   background-size: contain;
+  border: 1px solid rgb(70, 100, 188);
   &::before {
     @include absolute-center;
     content: "";
@@ -14,6 +16,12 @@
     height: 20px;
     background: url("/img/icon-arrow.svg") no-repeat center;
     background-size: cover;
+  }
+  &:hover {
+    background: rgb(255, 255, 255);
+    &::before {
+      background: url("/img/icon-arrow-purple.svg") no-repeat center;
+    }
   }
 }
 
@@ -34,7 +42,21 @@
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  position: relative;
   margin: 0 5px;
+  &::before {
+    @include absolute-center;
+    @include easeOut;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+  }
+  &:hover {
+    &::before {
+      background-color: rgb(70, 100, 188);
+    }
+  }
 }
 
 .swiper-pagination {
