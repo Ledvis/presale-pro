@@ -15,14 +15,24 @@
     @include container;
     position: relative;
     padding: 76px 15px 80px;
-    &::before {
-      @include horizontal-center;
-      content: "";
-      bottom: 155px;
-      width: 261px;
-      height: 166px;
-      background: url("/img/turbine.svg") no-repeat center;
-      background-size: cover;
+  }
+  &__img {
+    @include horizontal-center;
+    content: "";
+    bottom: 155px;
+    width: 261px;
+    height: 166px;
+    &--active {
+      .turbine43,
+      .turbine1 {
+        opacity: 0;
+        animation-name: electricity;
+        animation-duration: 5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
     }
   }
   &__title {
@@ -42,11 +52,11 @@
     }
     &__wrapper {
       padding: 75px 80px;
-      &::before {
-        bottom: 165px;
-        width: 398px;
-        height: 266px;
-      }
+    }
+    &__img {
+      bottom: 165px;
+      width: 398px;
+      height: 266px;
     }
     &__title {
       text-align: left;
@@ -79,13 +89,14 @@
     }
     &__wrapper {
       padding: 135px 425px 223px 15px;
-      &::before {
-        right: 0;
-        left: initial;
-        width: 651px;
-        height: 427px;
-        transform: translate(0, 0);
-      }
+    }
+    &__img {
+      top: 85px;
+      right: -130px;
+      left: initial;
+      width: 651px;
+      height: 427px;
+      transform: translate(0, 0) rotate(24deg);
     }
     &__title {
       margin-bottom: 30px;

@@ -1,0 +1,38 @@
+@keyframes flame {
+  0% {
+    transform: scaleY(0);
+  }
+  40% {
+    transform: scaleY(0.6);
+  }
+  60% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes electricity {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 10.7;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

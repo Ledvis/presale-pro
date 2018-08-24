@@ -158,11 +158,23 @@
   }
 }
 
+@include media-min($tablet-width) {
+  .navigation {
+    &__logo {
+      width: 169px;
+      height: 30px;
+    }
+  }
+}
+
 @include media-min($desktop-width) {
   .navigation {
     top: 10px;
     z-index: 15;
+    display: flex;
+    align-items: center;
     width: 100%;
+    min-height: 52px;
     &__container {
       @include container;
       display: flex;

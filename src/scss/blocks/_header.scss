@@ -16,32 +16,30 @@
     bottom: 25px;
     width: 290px;
     height: 334px;
-    .flame-animation {
-      transform: scaleY(0);
+    .st142,
+    .st140,
+    .st138 {
+      transform: scaleY(0.2);
       animation-name: flame;
       animation-duration: 3s;
       animation-timing-function: linear;
       animation-iteration-count: 1;
-      animation-direction: alternate;
+      animation-direction: normal;
       animation-fill-mode: forwards;
-    }
-    .st148 {
-      transform-origin: 0 140px;
-    }
-    .st120 {
-      transform-origin: 0 90px;
-    }
-    .st135 {
-      transform-origin: 0 130px;
-    }
-    .flame-group {
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          .flame-animation {
-            animation-delay: $i * 0.5s;
-          }
+          animation-delay: $i * 0.5s;
         }
       }
+    }
+    .st142 {
+      transform-origin: 0 132px;
+    }
+    .st140 {
+      transform-origin: 0 83px;
+    }
+    .st138 {
+      transform-origin: 0 120px;
     }
   }
   &__wrapper {
@@ -132,14 +130,5 @@
       font-size: 25px;
       line-height: 35px;
     }
-  }
-}
-
-@keyframes flame {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
   }
 }
