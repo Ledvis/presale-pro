@@ -17,6 +17,9 @@
   &__btn {
     margin-bottom: 50px;
   }
+  &__img {
+    display: none;
+  }
 }
 
 @include media-min($tablet-width) {
@@ -61,7 +64,7 @@
       &::after {
         top: -400px;
         right: -1800px;
-        background: url("/img/rect-shape-icon.png") no-repeat center;
+        background: url("/img/rect-shape.png") no-repeat center;
       }
     }
     &__container {
@@ -82,6 +85,28 @@
     }
     &__btn {
       margin-bottom: 0;
+    }
+    &__img {
+      position: absolute;
+      top: -35px;
+      right: -340px;
+      display: block;
+      width: 300px;
+      height: 248px;
+      .hole7 {
+        transform: scaleY(0.2);
+        transform-origin: 0 123px;
+      }
+      &.animate--active {
+        .hole7 {
+          animation-name: flame;
+          animation-duration: 3s;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+          animation-direction: normal;
+          animation-fill-mode: forwards;
+        }
+      }
     }
   }
 }

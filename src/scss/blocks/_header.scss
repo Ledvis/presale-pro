@@ -41,6 +41,19 @@
     .st138 {
       transform-origin: 0 120px;
     }
+    .st81,
+    .st85,
+    .st77,
+    .st73 {
+      opacity: 0;
+      animation-name: electricity;
+      animation-duration: 2s;
+      animation-delay: 3s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
   }
   &__wrapper {
     @include container;

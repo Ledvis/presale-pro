@@ -22,12 +22,12 @@
     bottom: 155px;
     width: 261px;
     height: 166px;
-    &--active {
+    &.animate--active {
       .turbine43,
       .turbine1 {
         opacity: 0;
         animation-name: electricity;
-        animation-duration: 5s;
+        animation-duration: 2s;
         animation-timing-function: ease-in;
         animation-iteration-count: 1;
         animation-direction: normal;
