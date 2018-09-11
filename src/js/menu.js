@@ -1,7 +1,14 @@
+import SmoothScroll from 'smooth-scroll';
+
+require('waypoints/lib/noframework.waypoints.min.js');
+
 const menuToggler = document.querySelector('.navigation__toggler');
 const mainNav = document.querySelector('.navigation');
 const langList = document.querySelector('.lang__list');
 const langValue = document.querySelector('.lang__value');
+const navLinks = document.querySelectorAll('.navigation__item a');
+const sections = document.querySelectorAll('section');
+const scroll = new SmoothScroll();
 
 let isMenuActive = false;
 
@@ -25,6 +32,27 @@ function showInView() {
   }
 }
 
+function addScroll(content, toggler, options = {
+  speed: 1000,
+  easing: 'easeOutCubic',
+}) {
+  scroll.animateScroll(
+    content,
+    toggler,
+    options,
+  );
+}
+
+function onLinkClick(link) {
+  if (document.querySelector('.navigation__item--active')) {
+    document.querySelector('.navigation__item--active').classList.remove('navigation__item--active');
+  }
+  const selector = link.getAttribute('href');
+  const content = document.querySelector(selector);
+  addScroll(content, link);
+  link.parentElement.classList.add('navigation__item--active');
+}
+
 export default function init() {
   menuToggler.addEventListener('click', (event) => {
     event.preventDefault();
@@ -36,5 +64,32 @@ export default function init() {
   langValue.addEventListener('click', () => {
     langValue.classList.toggle('lang__value--active');
     langList.classList.toggle('lang__list--active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.matches('.lang__value')) {
+      langValue.classList.remove('lang__value--active');
+      langList.classList.remove('lang__list--active');
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      onLinkClick(link);
+    });
+  });
+
+  sections.forEach((section) => {
+    new Waypoint({
+      element: section,
+      handler() {
+        if (document.querySelector('.navigation__item--active')) {
+          document.querySelector('.navigation__item--active').classList.remove('navigation__item--active');
+        }
+        const link = document.querySelector(`a[href="#${section.id}"]`);
+        link.parentElement.classList.add('navigation__item--active');
+      },
+      offset: '25%',
+    });
   });
 }

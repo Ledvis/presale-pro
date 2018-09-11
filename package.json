@@ -50,14 +50,15 @@
     "jquery": "^3.3.1",
     "normalize-scss": "^7.0.1",
     "prettier-stylelint": "^0.4.2",
+    "smooth-scroll": "^14.2.1",
     "stylelint": "^9.2.1",
     "stylelint-config-idiomatic-order": "^5.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "swiper": "^4.3.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
+    "waypoints": "^4.0.1",
     "webpack": "^4.10.0",
-    "webpack-merge": "^4.1.2",
-    "waypoints": "^4.0.1"
+    "webpack-merge": "^4.1.2"
   },
   "browserslist": {
     "production": [
