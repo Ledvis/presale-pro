@@ -212,8 +212,9 @@
     }
 
     &__logo {
-      width: 200px;
-      height: 36px;
+      display: block;
+      width: 120px;
+      height: auto;
     }
 
     &__menu {

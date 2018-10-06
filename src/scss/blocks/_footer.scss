@@ -1,9 +1,11 @@
 .footer {
   background-image: linear-gradient(to right, rgb(38, 27, 87) 0%, rgb(63, 70, 157) 100%);
+
   &__wrapper {
     @include container;
     padding: 30px 15px 0;
   }
+
   &__subtitle {
     margin: 0 0 18px;
     color: rgb(255, 255, 255);
@@ -13,29 +15,49 @@
     line-height: 18px;
     letter-spacing: 1.08px;
   }
+
   &__nav {
     display: flex;
     flex-wrap: wrap;
   }
+
   &__nav-container {
     margin-bottom: 37px;
+
     &:nth-of-type(even) {
       flex-basis: 45%;
     }
+
     &:nth-of-type(odd) {
       flex-basis: 55%;
     }
   }
+
   &__nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
+
   &__nav-item {
+    &--flex {
+      width: 33%;
+
+      &:not(:nth-of-type(-n+3)) {
+        margin-top: 15px;
+      }
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 5px;
     }
   }
+
   &__nav-link {
     @include easeOut;
     position: relative;
@@ -46,6 +68,7 @@
     line-height: 14px;
     letter-spacing: 0.84px;
     text-decoration: none;
+
     &::before {
       @include easeOut;
       content: "";
@@ -56,19 +79,68 @@
       height: 1px;
       background-color: rgb(0, 253, 254);
     }
+
     &:hover {
       color: rgb(0, 253, 254);
+
       &::before {
         width: 100%;
       }
     }
   }
+
+  &__nav-social {
+    display: block;
+    font-size: 0;
+
+    &--telegram {
+      width: 22px;
+      height: 18px;
+    }
+
+    &--twitter {
+      width: 22px;
+      height: 18px;
+    }
+
+    &--facebook {
+      width: 10px;
+      height: 18px;
+    }
+
+    &--medium {
+      width: 23px;
+      height: 18px;
+    }
+
+    &--bitcoin {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--reddit {
+      width: 19px;
+      height: 18px;
+    }
+
+    svg {
+      @include easeOut;
+      fill: white;
+
+      &:hover {
+        fill: rgb(0, 253, 254);
+      }
+    }
+  }
+
   &__text {
     margin-bottom: 27px;
   }
+
   &__form {
     position: relative;
     margin-bottom: 35px;
+
     &::before {
       content: "";
       position: absolute;
@@ -79,7 +151,10 @@
       background: url("/img/icon-mail.svg") no-repeat center;
       background-size: cover;
     }
+
     input {
+      position: relative;
+      z-index: 1;
       width: 100%;
       margin-bottom: 27px;
       padding: 4px 10px 16px 37px;
@@ -93,6 +168,7 @@
       border: none;
       border-bottom: 1px solid white;
       box-sizing: border-box;
+
       &:focus~label {
         top: -20px;
         left: 0;
@@ -100,9 +176,11 @@
         color: rgb(0, 253, 254);
       }
     }
+
     label {
       @include easeOut;
       position: absolute;
+      z-index: 0;
       top: 4px;
       left: 35px;
       color: rgb(255, 255, 255);
@@ -113,18 +191,22 @@
       letter-spacing: 0.96px;
     }
   }
+
   &__definition {
     display: flex;
     margin-bottom: 25px;
+
     img {
       margin-right: 15px;
     }
   }
+
   &__copyright {
     position: relative;
     z-index: 0;
     padding: 6px 0 8px;
     text-align: center;
+
     &::before {
       content: "";
       position: absolute;
@@ -136,6 +218,7 @@
       background-color: rgb(51, 49, 122);
     }
   }
+
   &__submenu-list {
     display: flex;
     justify-content: center;
@@ -143,11 +226,14 @@
     padding: 0;
     list-style: none;
   }
+
   &__submenu-item {
     position: relative;
     margin: 0;
+
     &:not(:last-of-type) {
       margin-right: 13px;
+
       &::before {
         @include vertical-center;
         content: "|";
@@ -159,6 +245,7 @@
         line-height: 12px;
       }
     }
+
     a {
       @include easeOut;
       color: rgb(255, 255, 255);
@@ -168,6 +255,7 @@
       line-height: 12px;
       letter-spacing: 0.72px;
       text-decoration: none;
+
       &:hover {
         color: rgb(0, 253, 254);
       }
@@ -182,38 +270,49 @@
       justify-content: space-between;
       padding: 30px 15px 22px;
     }
+
     &__nav {
       width: 354px;
     }
+
     &__container {
       width: 293px;
     }
+
     &__subtitle {
+      margin-bottom: 30px;
       font-size: 21px;
       line-height: 21px;
     }
+
     &__definition {
       align-items: flex-start;
       margin-bottom: 0;
+
       img {
         position: relative;
         top: 3px;
       }
     }
+
     &__description {
       margin-bottom: 0;
       font-size: 14px;
       line-height: 24px;
     }
+
     &__nav-container {
       margin-bottom: 0;
+
       &:nth-of-type(-n+2) {
         margin-bottom: 35px;
       }
     }
+
     &__copyright {
       padding: 10px 0;
     }
+
     &__copy-text {
       font-size: 12px;
       line-height: 12px;
@@ -226,61 +325,76 @@
     &__wrapper {
       padding: 50px 15px 30px;
     }
+
     &__nav {
       flex-grow: 1;
       margin-right: 35px;
     }
+
     &__nav-container {
       flex-grow: 1;
+
       &:nth-of-type(even) {
-        flex-basis: 20%;
+        flex-basis: 15%;
       }
+
       &:nth-of-type(odd) {
-        flex-basis: 20%;
+        flex-basis: 15%;
       }
+
       &:nth-of-type(-n+2) {
         margin-bottom: 0;
       }
-      &:not(:last-of-type) {
-        margin-right: 45px;
+
+      &:last-of-type {
+        margin: 0 250px 0 100px;
       }
     }
+
     &__container {
       flex-basis: 360px;
     }
+
     &__subtitle {
       margin-bottom: 35px;
       font-size: 25px;
       line-height: 25px;
     }
+
     &__nav-item {
       &:not(:last-of-type) {
         margin-bottom: 14px;
       }
     }
+
     &__copyright-container {
       @include container;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     &__submenu-list {
       order: 1;
       margin-bottom: 0;
     }
+
     &__submenu-item {
       &:not(:last-of-type) {
         margin-right: 35px;
+
         &::before {
           right: -18px;
         }
       }
+
       a {
         font-size: 14px;
         line-height: 14px;
         letter-spacing: 0.84px;
       }
     }
+
     &__copy-text {
       font-size: 14px;
       line-height: 14px;

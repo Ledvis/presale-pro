@@ -1,5 +1,6 @@
 .timeline {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -9,18 +10,22 @@
     height: 2px;
     background-color: rgba(101, 65, 163, 0.3);
   }
+
   &__wrapper {
     @include container;
     position: relative;
     padding: 16px 15px 17px;
   }
+
   &__title {
     margin-bottom: 33px;
   }
+
   &__subtitle {
     margin-bottom: 40px;
     font-size: 18px;
   }
+
   &__item {
     position: relative;
     top: 6px;
@@ -35,12 +40,15 @@
     border: 1px solid rgb(70, 100, 188);
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
+
     &:hover {
       background-image: linear-gradient(-267deg, rgb(101, 65, 163) 0%, rgb(70, 100, 188) 100%);
+
       span {
         color: rgb(255, 255, 255);
       }
     }
+
     span {
       @include easeOut;
       color: rgb(70, 100, 188);
@@ -51,25 +59,31 @@
       text-transform: uppercase;
     }
   }
+
   &__text {
     display: none;
     padding: 0 50px;
     text-align: center;
   }
+
   &__control {
     top: 175px;
   }
+
   &__slide {
     position: relative;
   }
+
   &__date {
     @include horizontal-center;
     top: -35px;
     width: 100px;
     text-align: center;
     opacity: 0.4;
+
     p {
       margin: 0;
+
       &:first-of-type {
         margin-bottom: 5px;
         color: rgb(1, 1, 1);
@@ -80,6 +94,7 @@
         text-transform: uppercase;
         letter-spacing: 0.79px;
       }
+
       &:last-of-type {
         color: rgb(70, 100, 188);
         font-family: $main-font;
@@ -90,12 +105,14 @@
       }
     }
   }
+
   .swiper-slide-active {
     .timeline__item {
       top: 0;
       width: 61px;
       height: 61px;
       background-image: linear-gradient(to right, rgba(101, 65, 163, 0.8) 0%, rgba(70, 100, 188, 0.8) 100%);
+
       &::before {
         content: "";
         position: absolute;
@@ -106,6 +123,7 @@
         background-image: linear-gradient(to right, rgba(101, 65, 163, 0.6) 0%, rgba(70, 100, 188, 0.6) 100%);
         border-radius: 50%;
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -116,6 +134,7 @@
         background-image: linear-gradient(to right, rgba(101, 65, 163, 0.4) 0%, rgba(70, 100, 188, 0.4) 100%);
         border-radius: 50%;
       }
+
       span {
         position: relative;
         z-index: 1;
@@ -128,6 +147,7 @@
         font-size: 23px;
         line-height: 18px;
         border-radius: 50%;
+
         &::before {
           content: "";
           position: absolute;
@@ -140,9 +160,11 @@
         }
       }
     }
+
     .timeline__text {
       display: block;
     }
+
     .timeline__date {
       display: none;
     }
@@ -156,22 +178,28 @@
       right: -1000px;
       left: -1000px;
     }
+
     &__wrapper {
       padding: 15px 80px;
     }
+
     &__title {
       margin-bottom: 44px;
     }
+
     &__text {
       padding: 0;
     }
+
     &__subtitle {
       font-size: 21px;
       line-height: 30px;
     }
+
     &__caption {
       font-size: 12px;
     }
+
     &__control {
       top: 216px;
     }
@@ -183,6 +211,7 @@
     &::before {
       top: 309px;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -190,12 +219,14 @@
       right: 0;
       left: 0;
       height: 295px;
-      background: url("/img/wave.svg");
+      background: url("/img/wave.svg") no-repeat center;
       background-size: cover;
     }
+
     &__container {
       @include container;
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -208,43 +239,53 @@
         height: 1112px;
       }
     }
+
     &__wrapper {
       position: relative;
-      padding: 50px 80px 276px;
+      padding: 50px 20px 276px;
     }
+
     &__title {
       margin-bottom: 63px;
     }
+
     &__subtitle {
       margin-bottom: 52px;
       font-size: 25px;
       line-height: 30px;
     }
+
     &__caption {
       margin-bottom: 8px;
       font-size: 14px;
       line-height: 18px;
     }
+
     &__control {
       top: 292px;
     }
+
     &__date {
       width: 200px;
+
       p {
         &:first-of-type {
           font-size: 10px;
           line-height: 10px;
         }
+
         &:last-of-type {
           font-size: 12px;
           line-height: 12px;
         }
       }
     }
+
     &__item {
       width: 40px;
       height: 40px;
     }
+
     .swiper-slide-prev,
     .swiper-slide-next {
       .timeline__item {
@@ -252,17 +293,20 @@
         height: 50px;
       }
     }
+
     .swiper-slide {
       .timeline__item {
         margin-top: 5px;
       }
     }
+
     .swiper-slide-prev,
     .swiper-slide-next {
       .timeline__item {
         margin-top: 0;
       }
     }
+
     .swiper-slide-active {
       .timeline__item {
         margin-top: 0;

@@ -2,7 +2,6 @@ import Swiper from 'swiper';
 
 export default function init() {
   const timelineSwiper = new Swiper('.timeline__wrapper', {
-    grabCursor: true,
     centeredSlides: true,
     keyboard: {
       enabled: true,
@@ -14,6 +13,7 @@ export default function init() {
     slidesPerView: 5,
     spaceBetween: 60,
     slideToClickedSlide: 'true',
+    grabCursor: true,
     breakpoints: {
       // when window width is <= 767px
       767: {

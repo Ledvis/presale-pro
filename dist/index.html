@@ -2050,14 +2050,14 @@
           </button>
         </div>
         <ul class="navigation__menu">
-          <li class="navigation__item  navigation__item--active"><a href="#">Mission</a></li>
-          <li class="navigation__item"><a href="#">What is PP</a></li>
-          <li class="navigation__item"><a href="#">Token</a></li>
-          <li class="navigation__item"><a href="#">Support</a></li>
-          <li class="navigation__item"><a href="#">Roadmap</a></li>
-          <li class="navigation__item"><a href="#">Partners</a></li>
-          <li class="navigation__item"><a href="#">Team</a></li>
-          <li class="navigation__item"><a href="#">Press</a></li>
+          <li class="navigation__item"><a href="#mission">Mission</a></li>
+          <li class="navigation__item"><a href="#faq">What is PP</a></li>
+          <li class="navigation__item"><a href="#token">Token</a></li>
+          <li class="navigation__item"><a href="#support">Support</a></li>
+          <li class="navigation__item"><a href="#roadmap">Roadmap</a></li>
+          <li class="navigation__item"><a href="#partners">Partners</a></li>
+          <li class="navigation__item"><a href="#team">Team</a></li>
+          <li class="navigation__item"><a href="#press">Press</a></li>
         </ul>
         <div class="navigation__lang  lang">
           <button class="lang__value">EN</button>
@@ -2085,7 +2085,7 @@
     </div>
   </header>
   <main>
-    <section class="mission">
+    <section id="mission" class="mission">
       <div class="mission__wrapper">
         <div class="mission__container">
           <p class="mission__caption  caption">our mission:</p>
@@ -2816,7 +2816,7 @@
         </svg>
       </div>
     </section>
-    <section class="faq">
+    <section id="faq" class="faq">
       <div class="faq__wrapper">
         <h3 class="faq__title  title">How does the platform work?
         </h3>
@@ -2836,7 +2836,7 @@
         </ul>
       </div>
     </section>
-    <section class="distribution">
+    <section id="token" class="distribution">
       <div class="distribution__wrapper">
         <h3 class="distribution__title  title">Token distribution & sale terms</h3>
         <div class="distribution__container">
@@ -2882,7 +2882,7 @@
         </div>
       </div>
     </section>
-    <section class="support">
+    <section id="support" class="support">
       <div class="support__wrapper">
         <h3 class="support__title  title">Supporting the next generation blockchain companie
         </h3>
@@ -3398,8 +3398,7 @@
         RpHlcWQ2vOnhjGyykV0iAs5wHS0q2ugRDtU4612C9W6JDmiNC7betSyN640XGm4kXni4UXgp4Ebg
         pYHrjZcKrideOrheeCnheuClhbsaLzXc2rbsLMD0cFe1rwzc2e0rBXdm+0rCndG+snBHAcvDbQHu
         IYL7A+AaIrgHEMEdgPRT1n/E15MntE7jjGrfgBOjGuKZDpw1Toxq5j0rONG46dHAeRyR6cbUqMr4
-        tmmc9G2bxknftmmc9G2bHEAzqtJ3RL8EGACVdjPlc5x3hAAAAABJRU5ErkJggg=="
-                      transform="matrix(1 0 0 1 139.4399 132.6667)">
+        tmmc9G2bxknftmmc9G2bHEAzqtJ3RL8EGACVdjPlc5x3hAAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 139.4399 132.6667)">
                     </image>
                     <path class="turbine24" d="M192.6,227c-19.7-11.4-35.7-39-35.7-61.8c0-8.2,2.1-14.6,5.6-19c-9.9,1.6-16.4,10.6-16.4,25.2
                     c0,22.7,16,50.4,35.7,61.8c12.6,7.3,23.7,6.1,30-1.6C206.3,232.5,199.7,231.1,192.6,227z" />
@@ -3917,7 +3916,7 @@
         <a class="support__btn  btn" href="#"><span class="btn__text  btn__text--icon-bulb">Submit your project</span></a>
       </div>
     </section>
-    <section class="timeline">
+    <section id="roadmap" class="timeline">
       <div class="timeline__wave">
         <div class="timeline__container">
           <div class="timeline__wrapper  swiper-container">
@@ -3967,13 +3966,21 @@
               </div>
             </div>
             <!-- Add Arrows -->
-            <div class="timeline__control  swiper-button-next"></div>
-            <div class="timeline__control  swiper-button-prev"></div>
+            <div class="timeline__control  swiper-button-next">
+              <svg viewBox="0 0 98.8 145.9">
+                <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+              </svg>
+            </div>
+            <div class="timeline__control  swiper-button-prev">
+              <svg viewBox="0 0 98.8 145.9">
+                <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="partners">
+    <section id="partners" class="partners">
       <div class="partners__wrapper">
         <h3 class="partners__title  title">Partners</h3>
         <ul class="partners__list">
@@ -3998,15 +4005,14 @@
         </ul>
       </div>
     </section>
-    <section class="team">
+    <section id="team" class="team">
       <div class="team__wrapper  swiper-container">
         <h3 class="team__title  title">Team</h3>
         <div class="team__slider  swiper-wrapper">
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-1.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="left"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4026,7 +4032,7 @@
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-2.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="center"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4046,7 +4052,7 @@
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-1.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="right"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4066,7 +4072,7 @@
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-2.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="left"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4086,7 +4092,7 @@
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-2.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="center"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4106,7 +4112,7 @@
           <div class="team__slide  swiper-slide">
             <div class="team__face">
               <img src="/img/face-2.jpg" alt="">
-              <p class="team__patch"><span></span>More info</p>
+              <p class="team__patch" data-side="right"><span></span>More info</p>
               <div class="team__social  social">
                 <a class="social__link  social__link--facebook" href="#">
                   <svg class="face" viewBox="0 0 11 21" width="11" height="21">
@@ -4125,11 +4131,19 @@
           </div>
         </div>
         <!-- Add Arrows -->
-        <div class="team__control  swiper-button-next"></div>
-        <div class="team__control  swiper-button-prev"></div>
+        <div class="team__control  swiper-button-next">
+          <svg viewBox="0 0 98.8 145.9">
+            <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+          </svg>
+        </div>
+        <div class="team__control  swiper-button-prev">
+          <svg viewBox="0 0 98.8 145.9">
+            <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+          </svg>
+        </div>
       </div>
     </section>
-    <section class="press">
+    <section id="press" class="press">
       <div class="press__wrapper  swiper-container">
         <h3 class="press__title  title">Press</h3>
         <div class="press__slider  swiper-wrapper">
@@ -4151,8 +4165,16 @@
         <!-- Add Pagination -->
         <div class="press__pagination  swiper-pagination"></div>
         <!-- Add Arrows -->
-        <div class="press__control  swiper-button-next"></div>
-        <div class="press__control  swiper-button-prev"></div>
+        <div class="press__control  swiper-button-next">
+          <svg viewBox="0 0 98.8 145.9">
+            <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+          </svg>
+        </div>
+        <div class="press__control  swiper-button-prev">
+          <svg viewBox="0 0 98.8 145.9">
+            <use xlink:href="/img/icon-arrow-white.svg#icon-arrow-white">
+          </svg>
+        </div>
       </div>
     </section>
   </main>
@@ -4170,40 +4192,50 @@
           </ul>
         </div>
         <div class="footer__nav-container">
-          <h4 class="footer__subtitle">For ICOs</h4>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Publish new ICO</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Analyzer</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Premium listing</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Services</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Widgets</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-container">
-          <h4 class="footer__subtitle">For All</h4>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO listing</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">People of Blockchain</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Bounty</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Whitelist</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Agencies</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Exchanges</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Experts</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ROI calculator</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">ICO Show Time</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-container">
           <h4 class="footer__subtitle">Social</h4>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Telegram</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Twitter</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Facebook</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Medium</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Bitcoin Talk</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">GitHub</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">LinkedIn</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Reddit</a></li>
+          <ul class="footer__nav-list  footer__nav-list--flex">
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--telegram">
+                <svg viewBox="0 0 21.5 18">
+                  <use xlink:href="/img/telegram.svg#telegram">
+                </svg>
+              </a>
+            </li>
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--twitter">
+                <svg viewBox="0 0 22.2 18">
+                  <use xlink:href="/img/twitter.svg#twitter">
+                </svg>
+              </a>
+            </li>
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--facebook">
+                <svg viewBox="0 0 9.3 18">
+                  <use xlink:href="/img/facebook.svg#facebook">
+                </svg>
+              </a>
+            </li>
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--medium">
+                <svg viewBox="0 0 22.7 18">
+                  <use xlink:href="/img/medium.svg#medium">
+                </svg>
+              </a>
+            </li>
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--bitcoin">
+                <svg viewBox="0 0 18 18">
+                  <use xlink:href="/img/bitcoin.svg#bitcoin">
+                </svg>
+              </a>
+            </li>
+            <li class="footer__nav-item  footer__nav-item--flex">
+              <a href="#" class="footer__nav-social  footer__nav-social--reddit">
+                <svg viewBox="0 0 19.1 18">
+                  <use xlink:href="/img/reddit.svg#reddit">
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -4232,6 +4264,7 @@
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
   <script src="js/bundle.js" async></script>
 </body>
 

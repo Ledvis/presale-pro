@@ -1,5 +1,6 @@
 .header {
   position: relative;
+
   &::after {
     @include horizontal-center;
     content: "";
@@ -10,55 +11,64 @@
     background: url("/img/header-bg-mb.png") no-repeat center;
     background-size: contain;
   }
+
   &__img {
     @include horizontal-center;
     position: absolute;
     bottom: 25px;
     width: 290px;
     height: 334px;
+
     .st142,
     .st140,
     .st138 {
       transform: scaleY(0.2);
       animation-name: flame;
-      animation-duration: 3s;
+      animation-duration: 1s;
       animation-timing-function: linear;
       animation-iteration-count: 1;
       animation-direction: normal;
       animation-fill-mode: forwards;
+
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          animation-delay: $i * 0.5s;
+          animation-delay: $i * 0.3s;
         }
       }
     }
+
     .st142 {
       transform-origin: 0 132px;
     }
+
     .st140 {
       transform-origin: 0 83px;
     }
+
     .st138 {
       transform-origin: 0 120px;
     }
+
     .st81,
     .st85,
     .st77,
     .st73 {
       opacity: 0;
       animation-name: electricity;
-      animation-duration: 2s;
-      animation-delay: 3s;
+      animation-duration: 1s;
+      animation-delay: 2s;
       animation-timing-function: ease-in;
       animation-iteration-count: 1;
       animation-direction: normal;
       animation-fill-mode: forwards;
     }
   }
+
   &__wrapper {
     @include container;
     padding: 97px 15px 360px;
   }
+
   &__title {
     margin: 0 0 23px;
     color: rgb(255, 255, 255);
@@ -68,12 +78,14 @@
     line-height: 30px;
     letter-spacing: 1.32px;
     text-align: center;
+
     strong {
       color: rgb(0, 253, 254);
       font-weight: 500;
       text-transform: uppercase;
     }
   }
+
   &__text {
     text-align: center;
   }
@@ -85,19 +97,23 @@
       width: 1922px;
       height: 1660px;
     }
+
     &__img {
       bottom: 40px;
       width: 445px;
       height: 513px;
     }
+
     &__wrapper {
       padding: 244px 15px 585px;
     }
+
     &__title {
       margin-bottom: 41px;
       font-size: 45px;
       line-height: 56px;
     }
+
     &__text {
       padding: 0 180px;
       font-size: 21px;
@@ -118,26 +134,32 @@
       background: url("/img/header-dt-bg.png") no-repeat center;
       background-size: cover;
     }
+
     &__img {
       bottom: 30px;
       width: 472px;
       height: 547px;
     }
+
     &__wrapper {
       padding: 146px 15px 620px;
     }
+
     &__box {
       position: fixed;
       top: 20px;
     }
+
     &__container {
       padding: 0 160px;
     }
+
     &__title {
       font-size: 60px;
       line-height: 80px;
       letter-spacing: 3.6px;
     }
+
     &__text {
       padding: 0 150px;
       font-size: 25px;

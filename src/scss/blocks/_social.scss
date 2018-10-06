@@ -1,5 +1,6 @@
 .social {
   transform: rotate(-45deg);
+
   &__link {
     @include easeOut;
     position: relative;
@@ -10,25 +11,31 @@
     border: 1px solid rgb(70, 100, 188);
     border-radius: 5px;
     box-sizing: border-box;
+
     &:not(:last-of-type) {
       margin-right: 16px;
     }
+
     &--facebook {
       svg {
         transform: rotate(45deg) translate(2px, 4px);
       }
     }
+
     &--linkedin {
       svg {
         transform: rotate(45deg) translate(5px, 2px);
       }
     }
+
     svg {
       @include easeOut;
       fill: rgb(170, 170, 170);
     }
+
     &:hover {
-      background-color: rgb(70, 100, 188);
+      background-color: rgb(76, 80, 177);
+
       svg {
         fill: rgb(255, 255, 255);
       }

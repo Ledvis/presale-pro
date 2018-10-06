@@ -3,30 +3,36 @@
     @include container;
     padding: 16px 15px 17px;
   }
+
   &__title {
     margin-bottom: 36px;
   }
+
   &__slide {
     width: 220px;
     margin: 0 auto;
   }
+
   &__face {
     position: relative;
     width: 220px;
     margin: 0 auto 22px;
     text-align: center;
     box-sizing: border-box;
+
     &:hover {
       .team__patch {
         opacity: 1;
       }
     }
+
     img {
       display: block;
       width: 220px;
       height: 220px;
     }
   }
+
   &__patch {
     @include easeOut;
     position: absolute;
@@ -49,6 +55,7 @@
     background-size: cover;
     opacity: 0;
     cursor: pointer;
+
     span {
       display: inline-block;
       width: 10px;
@@ -58,12 +65,14 @@
       background-size: cover;
     }
   }
+
   &__social {
     position: absolute;
     bottom: 30px;
     left: 115px;
     display: flex;
   }
+
   &__control {
     top: initial;
     bottom: 19px;
@@ -75,6 +84,7 @@
     &__wrapper {
       padding: 15px 80px;
     }
+
     &__subtitle {
       margin-bottom: 10px;
       font-size: 18px;
@@ -88,6 +98,7 @@
     &__wrapper {
       position: relative;
       padding: 37px 30px 204px;
+
       &::before {
         content: "";
         position: absolute;
@@ -100,42 +111,57 @@
         height: 1073px;
       }
     }
+
     &__subtitle {
       margin-bottom: 10px;
       font-size: 18px;
       line-height: 18px;
     }
+
     &__slider {
       flex-wrap: wrap;
       justify-content: space-between;
     }
+
     &__title {
       margin-bottom: 65px;
     }
+
     &__slide {
       width: 330px;
       margin: 0;
+
       &:not(:nth-of-type(-n+3)) {
         margin-top: 46px;
       }
     }
+
     &__face {
       width: 330px;
       margin-bottom: 31px;
+
       img {
         width: 330px;
         height: 330px;
       }
     }
+
     &__subtitle {
       margin-bottom: 20px;
       font-size: 25px;
       line-height: 25px;
     }
+
     &__social {
       left: 174px;
     }
+
     &__control {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
       display: none;
     }
   }

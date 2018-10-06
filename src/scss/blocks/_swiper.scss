@@ -2,6 +2,9 @@
 .swiper-button-next {
   @include easeOut;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 35px;
   height: 35px;
   margin-top: initial;
@@ -10,25 +13,26 @@
   background-size: contain;
   border: 1px solid rgb(70, 100, 188);
   transform: rotate(180deg);
-  &::before {
-    @include absolute-center;
-    content: "";
-    width: 14px;
-    height: 20px;
-    background: url("/img/icon-arrow-white.svg") no-repeat center;
-    background-size: cover;
-  }
+
   &:hover {
     background: rgb(255, 255, 255);
-    &::before {
-      background: url("/img/icon-arrow-purple.svg") no-repeat center;
+
+    svg {
+      fill: rgb(70, 100, 188);
     }
+  }
+
+  svg {
+    @include easeOut;
+    fill: white;
+    width: 14px;
+    height: 20px;
   }
 }
 
 .swiper-button-next {
-  &::before {
-    transform: translate(-50%, -50%) rotate(180deg);
+  svg {
+    transform: rotate(180deg);
   }
 }
 
@@ -45,6 +49,7 @@
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
   position: relative;
   margin: 0 5px;
+
   &::before {
     @include absolute-center;
     @include easeOut;
@@ -53,6 +58,7 @@
     height: 5px;
     background-color: transparent;
   }
+
   &:hover {
     &::before {
       background-color: rgb(70, 100, 188);

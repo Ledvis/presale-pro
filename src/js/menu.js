@@ -7,7 +7,6 @@ const mainNav = document.querySelector('.navigation');
 const langList = document.querySelector('.lang__list');
 const langValue = document.querySelector('.lang__value');
 const navLinks = document.querySelectorAll('.navigation__item a');
-const sections = document.querySelectorAll('section');
 const scroll = new SmoothScroll();
 
 let isMenuActive = false;
@@ -44,13 +43,9 @@ function addScroll(content, toggler, options = {
 }
 
 function onLinkClick(link) {
-  if (document.querySelector('.navigation__item--active')) {
-    document.querySelector('.navigation__item--active').classList.remove('navigation__item--active');
-  }
   const selector = link.getAttribute('href');
   const content = document.querySelector(selector);
   addScroll(content, link);
-  link.parentElement.classList.add('navigation__item--active');
 }
 
 export default function init() {
@@ -76,20 +71,6 @@ export default function init() {
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       onLinkClick(link);
-    });
-  });
-
-  sections.forEach((section) => {
-    new Waypoint({
-      element: section,
-      handler() {
-        if (document.querySelector('.navigation__item--active')) {
-          document.querySelector('.navigation__item--active').classList.remove('navigation__item--active');
-        }
-        const link = document.querySelector(`a[href="#${section.id}"]`);
-        link.parentElement.classList.add('navigation__item--active');
-      },
-      offset: '25%',
     });
   });
 }
